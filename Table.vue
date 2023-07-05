@@ -7,8 +7,7 @@
     <br /><br />
     <div class="search-box">
       <input  style="width: 300px;" class="input is-info" v-model="searchDocumentName" type="text" placeholder="Search Document Name" />
-      <input  style="width: 300px; margin-left: 6px;" class="input is-info" v-model="SearchSystemName" type="text" placeholder="Search System Name" />
-     
+      
     </div>
     <br />
     <div class="Header-text2" style="margin-left: 6px"> Result</div>
