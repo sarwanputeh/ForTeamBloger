@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="Header-text2" style="margin-left: 6px">
-      <file-search-outlined />
+     
       Criteria
     </div>
     <br /><br />
@@ -11,7 +11,7 @@
      
     </div>
     <br />
-    <div class="Header-text2" style="margin-left: 6px"><Table-Outlined /> Result</div>
+    <div class="Header-text2" style="margin-left: 6px"> Result</div>
     <br />
     <div class="table-container">
       <table class="table is-fullwidth">
@@ -31,13 +31,6 @@
             <td>{{ document.documentTypeCode }}</td>
             <td>{{ document.documentTypeName }}</td>
             <td>{{ document.systemCode }}</td>
-           
-            <!-- <td>
-              <input type="checkbox" :checked="document.customerSign" disabled />
-            </td>
-            <td>
-              <input type="checkbox" :checked="document.tolcSign" disabled />
-            </td> -->
             <td>{{ document.folderName }}</td>
            
           </tr>
@@ -84,9 +77,7 @@ import axios from "axios";
 
 export default {
   components: {
-    EditOutlined,
-    FileSearchOutlined,
-    TableOutlined,
+   
   },
   data() {
     return {
@@ -138,6 +129,7 @@ export default {
       return Array.from({ length: end - start + 1 }, (_, i) => start + i);
     },
     paginatedDocuments() {
+      //ผมประกาศ filteredDocuments เพื่อเก็บ  this.documents ซึ่งก็คือ Data ที่ดึง API มาเก็บ
       let filteredDocuments = this.documents;
 
       if (this.searchDocumentName) {
@@ -211,7 +203,7 @@ export default {
 }
 
 .pagination-link.is-current {
-  background-color: #007bff;
+  background-color: #007bff;  
   color: #fff;
   border-color: #007bff;
 }
